@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EA SPECTRA - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>EA SPECTRA</h1>
+    <div class="user-info">
+      <span>Logged in as: wandilefx</span>
+      <div class="menu">
+        <button id="menuButton">⋮</button>
+        <div id="dropdownMenu" class="dropdown-content">
+          <a href="#eaProfile">View EA Profile</a>
+          <a href="#licenseGenerator">Generate License Key</a>
+          <a href="#activeKeys">Active Members</a>
+          <a href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard-main">
+    <section id="rdpConnection" class="dashboard-section">
+      <h2>Bridge Connection</h2>
+      <form id="rdpForm">
+        <input type="text" id="pcName" placeholder="PC Name (Optional)">
+        <input type="text" id="ipAddress" placeholder="IP Address" required>
+        <input type="text" id="rdpUsername" placeholder="RDP Username" required>
+        <input type="password" id="rdpPassword" placeholder="RDP Password" required>
+        <button type="submit">Connect</button>
+      </form>
+    </section>
+
+    <section id="eaProfile" class="dashboard-section">
+      <h2>EA Profile</h2>
+      <form id="eaProfileForm">
+        <input type="file" id="eaImage" accept="image/*">
+        <textarea id="eaBio" rows="4" placeholder="Enter EA Bio"></textarea>
+        <button type="submit">Save EA Profile</button>
+      </form>
+    </section>
+
+    <section id="licenseGenerator" class="dashboard-section">
+      <h2>License Key Generator</h2>
+      <button id="generateKeyButton">Generate Key</button>
+      <p id="generatedKey"></p>
+    </section>
+
+    <section id="activeKeys" class="dashboard-section">
+      <h2>Active License Keys</h2>
+      <ul id="licenseKeyList"></ul>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
